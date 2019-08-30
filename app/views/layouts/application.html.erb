@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TodolistApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  </head>
+<style type="text/css">
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  position: absolute; top: 10%; left: 30%;
+
+}
+
+.popup-signup {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  position: absolute; top: 10%; left: 30%;
+
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table {
+border: medium solid #6495ed;
+border-collapse: collapse;
+width: 60%;
+}
+th {
+font-family: monospace;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+background-color: #D0E3FA;
+background-image: url(sky.jpg);
+text-align: center
+}
+td {
+font-family: sans-serif;
+/*border: thin solid #6495ed;*/
+width: 50%;
+padding: 5px;
+text-align: center;
+background-color: #ffffff;;
+}
+caption {
+font-family: sans-serif;
+}
+
+button {
+  background-color: #696969;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #808080;
+}
+</style>
+
+  <body>
+    <%= render 'layouts/navbar'  %>
+    <%= render 'layouts/flash'  %>
+    <%= yield %>
+  </body>
+</html>

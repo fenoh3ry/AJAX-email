@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body> 
+	<%= link_to "Recevoir un email", email_index_path, class: 'btn btn-primary', method: :post, remote: true%>
+	
+	<div class="row">
+		<div class="col-6" id="emailObject">
+			<% @email.each do|email| %>
+				<div> 
+					<%= link_to email.object, email, remote: true %>
+				</div>
+			<% end %>
+		</div>
+		<div class="col-6" id="emailBody"></div>
+	</div>
+
+
+</body>
+</html>
